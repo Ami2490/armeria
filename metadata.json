@@ -1,0 +1,6 @@
+{
+  "name": "Hola Mundo",
+  "description": "Una aplicación simple y estéticamente agradable que muestra el mensaje 'Hola Mundo' utilizando React y Tailwind CSS.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
