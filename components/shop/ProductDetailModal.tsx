@@ -111,9 +111,9 @@ export default function ProductDetailModal({ product, isOpen, onClose }: Product
             <p className="text-gray-600 flex-1">{product.description}</p>
             
             <div className="my-6">
-              <span className="text-3xl font-bold text-green-600">€{product.price.toFixed(2)}</span>
+              <span className="text-3xl font-bold text-green-600">${product.price.toFixed(2)}</span>
               {product.originalPrice && (
-                <span className="text-lg text-gray-500 line-through ml-2">€{product.originalPrice.toFixed(2)}</span>
+                <span className="text-lg text-gray-500 line-through ml-2">${product.originalPrice.toFixed(2)}</span>
               )}
             </div>
             

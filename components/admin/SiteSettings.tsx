@@ -75,7 +75,7 @@ export default function SiteSettings() {
     facebookPixelId: "",
 
     // E-commerce
-    currency: "EUR",
+    currency: "USD",
     taxRate: 21,
     shippingCost: 5.99,
     freeShippingThreshold: 50,
@@ -850,8 +850,8 @@ export default function SiteSettings() {
                       onChange={(e) => setSettings({ ...settings, currency: e.target.value })}
                       className="w-full p-2 border rounded-md bg-background"
                     >
-                      <option value="EUR">EUR (€)</option>
                       <option value="USD">USD ($)</option>
+                      <option value="EUR">EUR (€)</option>
                       <option value="GBP">GBP (£)</option>
                     </select>
                   </div>
@@ -898,8 +898,8 @@ export default function SiteSettings() {
                   <div className="text-sm text-green-700 space-y-1">
                     <p>• Moneda: {settings.currency}</p>
                     <p>• IVA: {settings.taxRate}%</p>
-                    <p>• Envío: €{settings.shippingCost}</p>
-                    <p>• Envío gratis desde: €{settings.freeShippingThreshold}</p>
+                    <p>• Envío: ${settings.shippingCost}</p>
+                    <p>• Envío gratis desde: ${settings.freeShippingThreshold}</p>
                   </div>
                 </div>
               </CardContent>

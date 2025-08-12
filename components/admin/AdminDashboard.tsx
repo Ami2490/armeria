@@ -128,7 +128,7 @@ export default function AdminDashboard() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-blue-100 font-medium">Ventas Hoy</p>
-                    <p className="text-2xl font-bold text-white">€2,847</p>
+                    <p className="text-2xl font-bold text-white">$2,847</p>
                   </div>
                   <TrendingUp className="h-8 w-8 text-blue-100" />
                 </div>
@@ -237,7 +237,7 @@ export default function AdminDashboard() {
                         </div>
                         <div className="text-right">
                           <p className="font-semibold text-green-600">
-                            €{product.revenue.toFixed(2)}
+                            ${product.revenue.toFixed(2)}
                           </p>
                         </div>
                       </div>

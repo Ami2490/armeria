@@ -58,7 +58,7 @@ export default function CartPage() {
                   </div>
                   <div className="ml-4 flex-1">
                     <h3 className="font-semibold text-gray-800">{item.name}</h3>
-                    <p className="text-sm text-gray-600">Precio: €{item.price.toFixed(2)}</p>
+                    <p className="text-sm text-gray-600">Precio: ${item.price.toFixed(2)}</p>
                     <div className="flex items-center mt-2 space-x-2">
                       <Button
                         variant="outline"
@@ -86,7 +86,7 @@ export default function CartPage() {
                     </div>
                   </div>
                   <div className="text-right ml-4">
-                    <p className="font-bold text-lg">€{(item.price * item.quantity).toFixed(2)}</p>
+                    <p className="font-bold text-lg">${(item.price * item.quantity).toFixed(2)}</p>
                     <Button
                       variant="ghost"
                       size="icon"
@@ -121,20 +121,20 @@ export default function CartPage() {
               <CardContent className="space-y-4">
                 <div className="flex justify-between">
                   <span>Subtotal</span>
-                  <span>€{total.toFixed(2)}</span>
+                  <span>${total.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Envío</span>
-                  <span>{shippingCost === 0 ? "Gratis" : `€${shippingCost.toFixed(2)}`}</span>
+                  <span>{shippingCost === 0 ? "Gratis" : `$${shippingCost.toFixed(2)}`}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>IVA (21%)</span>
-                  <span>€{tax.toFixed(2)}</span>
+                  <span>${tax.toFixed(2)}</span>
                 </div>
                 <hr />
                 <div className="flex justify-between font-bold text-lg">
                   <span>Total</span>
-                  <span>€{grandTotal.toFixed(2)}</span>
+                  <span>${grandTotal.toFixed(2)}</span>
                 </div>
               </CardContent>
               <CardFooter className="flex flex-col gap-4">

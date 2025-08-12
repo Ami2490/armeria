@@ -65,7 +65,7 @@ export default function WishlistPage() {
                 </div>
                 <div className="p-4">
                   <h3 className="font-semibold text-gray-800 line-clamp-2">{item.name}</h3>
-                  <p className="text-lg font-bold text-green-600 mt-2">€{item.price.toFixed(2)}</p>
+                  <p className="text-lg font-bold text-green-600 mt-2">${item.price.toFixed(2)}</p>
                   <div className="mt-4 flex flex-col gap-2">
                     <Button onClick={() => handleMoveToCart(item)} className="w-full bg-green-600 hover:bg-green-700">
                       <ShoppingCart className="h-4 w-4 mr-2" />

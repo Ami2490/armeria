@@ -471,7 +471,7 @@ export default function OrderManagement() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-purple-100 font-medium">Ingresos</p>
-                <p className="text-2xl font-bold">€{orders.reduce((sum, o) => sum + o.total, 0).toFixed(0)}</p>
+                <p className="text-2xl font-bold">${orders.reduce((sum, o) => sum + o.total, 0).toFixed(0)}</p>
               </div>
               <DollarSign className="h-8 w-8 text-purple-100" />
             </div>
@@ -565,7 +565,7 @@ export default function OrderManagement() {
                     </td>
                     <td className="py-3 px-4">
                       <div>
-                        <p className="font-medium text-gray-900">€{order.total.toFixed(2)}</p>
+                        <p className="font-medium text-gray-900">${order.total.toFixed(2)}</p>
                         <p className="text-sm text-gray-600">{order.paymentMethod}</p>
                       </div>
                     </td>
@@ -931,12 +931,12 @@ export default function OrderManagement() {
                               <div className="flex-1">
                                 <h4 className="font-medium text-gray-900">{item.name}</h4>
                                 <p className="text-sm text-gray-600">
-                                  Cantidad: {item.quantity} × €{item.price.toFixed(2)}
+                                  Cantidad: {item.quantity} × ${item.price.toFixed(2)}
                                 </p>
                               </div>
                               <div className="text-right">
                                 <p className="font-medium text-gray-900">
-                                  €{(item.price * item.quantity).toFixed(2)}
+                                  ${(item.price * item.quantity).toFixed(2)}
                                 </p>
                               </div>
                             </div>
@@ -948,19 +948,19 @@ export default function OrderManagement() {
                           <div className="space-y-2">
                             <div className="flex justify-between text-gray-600">
                               <span>Subtotal:</span>
-                              <span>€{order.subtotal.toFixed(2)}</span>
+                              <span>${order.subtotal.toFixed(2)}</span>
                             </div>
                             <div className="flex justify-between text-gray-600">
                               <span>IVA:</span>
-                              <span>€{order.tax.toFixed(2)}</span>
+                              <span>${order.tax.toFixed(2)}</span>
                             </div>
                             <div className="flex justify-between text-gray-600">
                               <span>Envío:</span>
-                              <span>€{order.shipping.toFixed(2)}</span>
+                              <span>${order.shipping.toFixed(2)}</span>
                             </div>
                             <div className="flex justify-between text-lg font-bold text-gray-900 border-t border-gray-200 pt-2">
                               <span>Total:</span>
-                              <span>€{order.total.toFixed(2)}</span>
+                              <span>${order.total.toFixed(2)}</span>
                             </div>
                           </div>
                         </div>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Fish, Target, Users, Star } from "lucide-react"
+import Image from "next/image"
 
 export default function HeroSimple() {
   return (
@@ -30,12 +31,17 @@ export default function HeroSimple() {
             {/* Logo/Brand */}
             <div className="space-y-4">
               <motion.div
-                className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-600 to-blue-600 rounded-full mb-6"
+                className="inline-block mb-6"
                 initial={{ scale: 0, rotate: -180 }}
                 animate={{ scale: 1, rotate: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <span className="text-white font-bold text-2xl">AC</span>
+                <Image
+                  src="https://firebasestorage.googleapis.com/v0/b/zona-clic-admin.firebasestorage.app/o/AC%20TIEMPO%20LIBRE.png?alt=media&token=be7e985b-1cae-4848-bfe4-95c328b4f069"
+                  alt="Logo"
+                  width={80}
+                  height={80}
+                />
               </motion.div>
 
               <motion.h1

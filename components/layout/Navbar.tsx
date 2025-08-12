@@ -12,6 +12,7 @@ import { useCart } from "@/hooks/useCart"
 import { useWishlist } from "@/hooks/useWishlist"
 import { useAuth } from "@/hooks/useAuth"
 import NotificationCenter from "@/components/admin/NotificationCenter"
+import Image from "next/image"
 
 const navItems = [
   { name: "Inicio", href: "/" },
@@ -35,9 +36,12 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16 text-black bg-white">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-green-600 to-green-800 rounded-full flex items-center justify-center text-white font-bold text-lg">
-              AC
-            </div>
+            <Image
+              src="https://firebasestorage.googleapis.com/v0/b/zona-clic-admin.firebasestorage.app/o/AC%20TIEMPO%20LIBRE.png?alt=media&token=be7e985b-1cae-4848-bfe4-95c328b4f069"
+              alt="Logo"
+              width={40}
+              height={40}
+            />
             <span className="text-xl font-bold text-contrast hidden sm:block">Alejandro Caraballo</span>
           </Link>
 

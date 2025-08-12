@@ -1,6 +1,7 @@
 "use client"
 import Link from "next/link"
 import { Facebook, Instagram, Twitter, Youtube, Mail, Phone, MapPin } from "lucide-react"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -10,9 +11,12 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-green-600 to-green-800 rounded-full flex items-center justify-center text-white font-bold text-lg">
-                AC
-              </div>
+              <Image
+                src="https://firebasestorage.googleapis.com/v0/b/zona-clic-admin.firebasestorage.app/o/AC%20TIEMPO%20LIBRE.png?alt=media&token=be7e985b-1cae-4848-bfe4-95c328b4f069"
+                alt="Logo"
+                width={40}
+                height={40}
+              />
               <span className="text-xl font-bold">Alejandro Caraballo</span>
             </div>
             <p className="text-gray-300 text-sm">

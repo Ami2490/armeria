@@ -126,9 +126,9 @@ export default function ProductCard({ product, viewMode = "grid", onViewDetails 
             </div>
             <div className="flex justify-between items-end mt-4">
               <div>
-                <span className="text-2xl font-bold text-green-600">€{product.price}</span>
+                <span className="text-2xl font-bold text-green-600">${product.price}</span>
                 {product.originalPrice && (
-                  <span className="text-sm text-gray-500 line-through ml-2">€{product.originalPrice}</span>
+                  <span className="text-sm text-gray-500 line-through ml-2">${product.originalPrice}</span>
                 )}
               </div>
               <div className="flex items-center space-x-2">
@@ -239,9 +239,9 @@ export default function ProductCard({ product, viewMode = "grid", onViewDetails 
             </div>
             <div className="flex items-center justify-between mt-3">
               <div>
-                <span className="text-xl font-bold text-green-600">€{product.price}</span>
+                <span className="text-xl font-bold text-green-600">${product.price}</span>
                 {product.originalPrice && (
-                  <span className="text-sm text-gray-500 line-through ml-2">€{product.originalPrice}</span>
+                  <span className="text-sm text-gray-500 line-through ml-2">${product.originalPrice}</span>
                 )}
               </div>
               <Badge variant="outline" className="text-xs">

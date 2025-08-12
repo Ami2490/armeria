@@ -43,62 +43,30 @@ export default function Hero3D() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", duration: 1.5, bounce: 0.4 }}
         >
-          <div
-            className="relative w-48 h-48 mx-auto transform-3d"
+          <motion.div
+            className="relative w-48 h-48 mx-auto"
             style={{
-              transform: `perspective(1000px) rotateX(${mousePosition.y * 10}deg) rotateY(${mousePosition.x * 10}deg)`,
+              transform: `perspective(1000px) rotateX(${mousePosition.y * 10}deg) rotateY(${
+                mousePosition.x * 10
+              }deg)`,
+              transformStyle: "preserve-3d",
+            }}
+            animate={{ y: [0, -15, 0] }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              ease: "easeInOut",
             }}
           >
-            {/* Main Logo Circle */}
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-br from-green-600 via-green-500 to-green-700 rounded-full shadow-2xl"
-              animate={{
-                boxShadow: [
-                  "0 25px 50px -12px rgba(34, 197, 94, 0.25)",
-                  "0 25px 50px -12px rgba(34, 197, 94, 0.5)",
-                  "0 25px 50px -12px rgba(34, 197, 94, 0.25)",
-                ],
-              }}
-              transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
-              style={{ transform: "translateZ(20px)" }}
-            >
-              <div className="absolute inset-4 bg-gradient-to-br from-white/20 to-transparent rounded-full" />
-            </motion.div>
-
-            {/* Crosshair Center */}
-            <motion.div
-              className="absolute inset-0 flex items-center justify-center"
-              animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+            <Image
+              src="https://firebasestorage.googleapis.com/v0/b/zona-clic-admin.firebasestorage.app/o/AC%20TIEMPO%20LIBRE.png?alt=media&token=be7e985b-1cae-4848-bfe4-95c328b4f069"
+              alt="Alejandro Caraballo Logo"
+              width={192}
+              height={192}
+              className="object-contain drop-shadow-2xl"
               style={{ transform: "translateZ(40px)" }}
-            >
-              <div className="relative">
-                <div className="w-16 h-0.5 bg-orange-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-                <div className="w-0.5 h-16 bg-orange-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-                <motion.div
-                  className="w-4 h-4 border-2 border-orange-500 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-                  animate={{ scale: [1, 1.2, 1] }}
-                  transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-                />
-              </div>
-            </motion.div>
-
-            {/* AC Text */}
-            <motion.div
-              className="absolute inset-0 flex items-center justify-center text-4xl font-bold text-white"
-              style={{ transform: "translateZ(60px)" }}
-              animate={{
-                textShadow: [
-                  "0 0 20px rgba(255, 255, 255, 0.5)",
-                  "0 0 30px rgba(255, 255, 255, 0.8)",
-                  "0 0 20px rgba(255, 255, 255, 0.5)",
-                ],
-              }}
-              transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-            >
-              AC
-            </motion.div>
-          </div>
+            />
+          </motion.div>
         </motion.div>
 
         {/* Hero Text */}

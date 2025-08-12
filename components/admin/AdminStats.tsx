@@ -7,7 +7,7 @@ export default function AdminStats() {
   const stats = [
     {
       title: "Ventas Totales",
-      value: "€45,231.89",
+      value: "$45,231.89",
       change: "+20.1%",
       trend: "up",
       icon: DollarSign,
